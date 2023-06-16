@@ -13,15 +13,18 @@ ALLOWED_HOSTS = ["*"]
 
 
 INSTALLED_APPS = [
+    # third apps
+    "daphne",
+    "django_extensions",
+    # django apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # third apps
-    "rest_framework",
-    "django_extensions",
+    # my apps
+    "src.apps.chat",
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "src.core.wsgi.application"
+ASGI_APPLICATION = "src.core.asgi.application"
 
 
 # Database
